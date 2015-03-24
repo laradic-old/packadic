@@ -1,0 +1,33 @@
+{
+    "name": "laradic/packadic",
+    "type": "laradic-extension",
+    "description": "Packadic theme for laradic themes/extensions",
+    "homepage": "https://github.com/laradic/packadic",
+    "keywords": [
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Radic",
+            "email": "robin@radic.nl",
+            "role": "Package Author/Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "laradic/support": "~1.0",
+        "laradic/themes": "dev-master",
+        "laradic/extensions": "dev-master"
+    },
+    "require-dev": {
+        "laradic/dev": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laradic\\Packadic\\": "src/"
+        }
+    }
+}
