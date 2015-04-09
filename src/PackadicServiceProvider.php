@@ -20,6 +20,10 @@ class PackadicServiceProvider extends ServiceProvider
 {
     use ThemeProviderTrait;
 
+    protected $providers = [
+        'Laradic\Themes\ThemeServiceProvider'
+    ];
+
     public function boot()
     {
         /** @var \Illuminate\Foundation\Application $app */
@@ -31,5 +35,9 @@ class PackadicServiceProvider extends ServiceProvider
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
+
+        $widgets = $app->make('blade.widgets');
+        $widgets->register('test', 'Laradic\Packadic\Widgets\TestWidget');
+
     }
 }

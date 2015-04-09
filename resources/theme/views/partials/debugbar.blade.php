@@ -2,7 +2,7 @@
 <script>
     (function(){
         packadic.bindEventHandler('starting', function(){
-            require([ 'jquery', 'debugbar', 'plugins/bootstrap' ], function( $, PhpDebugBar ){
+            require([ 'jquery', 'debugbar', 'plugins/highlightjs', 'plugins/bootstrap' ], function( $, PhpDebugBar, highlightjs ){
                 console.log(PhpDebugBar);
                 <?php
                 $render = App::make('debugbar')->getJavascriptRenderer()->render();
