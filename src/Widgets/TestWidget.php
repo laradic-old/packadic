@@ -29,7 +29,7 @@ class TestWidget extends Widget
         return 'test';
     }
 
-    public function getView()
+    public function getViewName()
     {
         return 'theme::widgets.test';
     }
