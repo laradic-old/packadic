@@ -36,8 +36,7 @@ class PackadicServiceProvider extends ServiceProvider
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
 
-        $widgets = $app->make('blade.widgets');
-        $widgets->register('test', 'Laradic\Packadic\Widgets\TestWidget');
-
+        #$widgets = $app->make('blade.widgets');
+        #$widgets->register('test', 'Laradic\Packadic\Widgets\TestWidget');
     }
 }

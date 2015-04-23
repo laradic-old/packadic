@@ -2,17 +2,20 @@
 
 use Illuminate\Contracts\Foundation\Application;
 use Laradic\Extensions\Extension;
-use Laradic\Extensions\ExtensionCollection;
+use Laradic\Extensions\ExtensionFactory;
 
 return array(
     'name' => 'Packadic theme',
     'slug' => 'laradic/packadic',
     'dependencies' => [],
-    'register' => function(Application $app, Extension $extension, ExtensionCollection $extensions)
+    'handle' => [
+        'theme' => false
+    ],
+    'register' => function(Application $app, Extension $extension, ExtensionFactory $extensions)
     {
         $app->register('Laradic\Packadic\PackadicServiceProvider');
     },
-    'boot' => function(Application $app, Extension $extension, ExtensionCollection $extensions)
+    'boot' => function(Application $app, Extension $extension, ExtensionFactory $extensions)
     {
 
     }

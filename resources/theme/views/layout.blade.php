@@ -121,7 +121,7 @@
 @show
 
 @section('scripts.init')
-    <script src="{{ Asset::url("theme::scripts/init.js") }}"></script>
+    {!! Asset::script("theme::scripts/init.js") !!}
     <script>
         (function(){
 
@@ -143,11 +143,14 @@
             });
 
 
+            packadic.bindEventHandler('pre-boot', function(){
+                console.warn('(' + packadic.getElapsedTime() + 's) PRE-BOOT');
+            });
             packadic.bindEventHandler('booting', function(){
-                console.info('(demo outside of project) event handler - BOOTING');
+                console.warn('(' + packadic.getElapsedTime() + 's) BOOTING');
             });
             packadic.bindEventHandler('booted', function(){
-                console.info('(demo outside of project) event handler - BOOTED');
+                console.warn('(' + packadic.getElapsedTime() + 's) BOOTED');
                 require(['theme', 'theme/sidebar'], function(theme, sidebar){
                     theme.init();
                     @if(isset($menu))
@@ -160,12 +163,19 @@
                         sidebar.init();
                     @endif
                 })
+                require(['autoload'], function(autoload){
+                    autoload.scan($('body'), function(){
+                        if(packadic.config.pageLoadedOnAutoloaded === true){
+                            packadic.removePageLoader();
+                        }
+                    });
+                });
             });
             packadic.bindEventHandler('starting', function(){
-                console.info('(demo outside of project) event handler - STARTING');
+                console.warn('(' + packadic.getElapsedTime() + 's) STARTING');
             });
             packadic.bindEventHandler('started', function(){
-                console.info('(demo outside of project) event handler - STARTED');
+                console.warn('(' + packadic.getElapsedTime() + 's) STARTED');
             });
 
         }.call());
@@ -176,7 +186,7 @@
 @show
 
 @section('scripts.boot')
-    <script src="{{ Asset::url("theme::scripts/boot.js") }}"></script>
+    {!! Asset::script("theme::scripts/boot.js") !!}
 @show
 
 </body>
