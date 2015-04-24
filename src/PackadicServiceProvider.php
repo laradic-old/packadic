@@ -18,17 +18,20 @@ use Laradic\Themes\Traits\ThemeProviderTrait;
  */
 class PackadicServiceProvider extends ServiceProvider
 {
-    use ThemeProviderTrait;
 
     protected $providers = [
-        'Laradic\Themes\ThemeServiceProvider'
+        'Laradic\Themes\ThemeServiceProvider',
+        'Cartalyst\Alerts\Laravel\AlertsServiceProvider',
+    ];
+
+    protected $aliases = [
+        'Alert' => 'Cartalyst\Alerts\Laravel\Facades\Alert'
     ];
 
     public function boot()
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::boot();
-        $this->addNamespacePublisher('theme', __DIR__ . '/../resources/theme');
     }
 
     public function register()
@@ -36,7 +39,7 @@ class PackadicServiceProvider extends ServiceProvider
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
 
-        #$widgets = $app->make('blade.widgets');
-        #$widgets->register('test', 'Laradic\Packadic\Widgets\TestWidget');
+        #$config = $app->make('config');
+        $app->make('config')->set('cartalyst.alerts.classes', [ 'error' => 'danger' ]);
     }
 }

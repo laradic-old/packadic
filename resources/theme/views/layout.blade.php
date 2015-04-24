@@ -91,8 +91,8 @@
             </header>
             @show
             <div class="content">
-                @section('notifications')
-                    @include('theme::partials.notifications')
+                @section('alerts')
+                    @include('theme::partials.alerts')
                 @show
 
                 @section('content')
@@ -142,15 +142,7 @@
                 }
             });
 
-
-            packadic.bindEventHandler('pre-boot', function(){
-                console.warn('(' + packadic.getElapsedTime() + 's) PRE-BOOT');
-            });
-            packadic.bindEventHandler('booting', function(){
-                console.warn('(' + packadic.getElapsedTime() + 's) BOOTING');
-            });
             packadic.bindEventHandler('booted', function(){
-                console.warn('(' + packadic.getElapsedTime() + 's) BOOTED');
                 require(['theme', 'theme/sidebar'], function(theme, sidebar){
                     theme.init();
                     @if(isset($menu))
@@ -162,7 +154,7 @@
                     @else
                         sidebar.init();
                     @endif
-                })
+                });
                 require(['autoload'], function(autoload){
                     autoload.scan($('body'), function(){
                         if(packadic.config.pageLoadedOnAutoloaded === true){
@@ -171,18 +163,16 @@
                     });
                 });
             });
-            packadic.bindEventHandler('starting', function(){
-                console.warn('(' + packadic.getElapsedTime() + 's) STARTING');
-            });
-            packadic.bindEventHandler('started', function(){
-                console.warn('(' + packadic.getElapsedTime() + 's) STARTED');
-            });
 
         }.call());
     </script>
 
     {{-- It conflicts with requirejs jquery, so this fixes it --}}
     @include('theme::partials.debugbar')
+@show
+
+@section('scripts.custom')
+    {{-- Custom scripts here --}}
 @show
 
 @section('scripts.boot')
