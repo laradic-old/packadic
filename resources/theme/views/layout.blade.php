@@ -22,7 +22,8 @@
                     document.cookie = 'XDEBUG_SESSION=' + 'PHPSTORM' + ';path=/;';
                     document.cookie = 'XDEBUG_SESSION=' + '' + ';expires=Mon, 05 Jul 2000 00:00:00 GMT;path=/;';
                     document.location.reload();
-                }
+                };
+
             }.call())
         </script>
         @section('links')
@@ -138,6 +139,17 @@
                     baseUrl: "{{ Asset::url("theme::scripts") }}",
                     paths  : {
                         'debugbar': '/laradic/debug/debugbar/javascript'
+                    },
+                    cm: {
+                        css: '{{ Asset::url("theme::scripts") }}/plugins/codemirror/lib/codemirror.css',
+
+                        themes : {
+                            monokai : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/monokai.css',
+                            ambiance: '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/ambiance.css',
+                            eclipse : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/eclipse.css',
+                            twilight : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/twilight.css',
+                            zenburn : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/zenburn.css'
+                        }
                     }
                 }
             });
