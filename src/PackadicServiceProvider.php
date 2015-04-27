@@ -18,7 +18,7 @@ use Laradic\Themes\Traits\ThemeProviderTrait;
  */
 class PackadicServiceProvider extends ServiceProvider
 {
-
+    use ThemeProviderTrait;
     protected $providers = [
         'Laradic\Themes\ThemeServiceProvider',
         'Cartalyst\Alerts\Laravel\AlertsServiceProvider',
@@ -32,6 +32,8 @@ class PackadicServiceProvider extends ServiceProvider
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::boot();
+
+        $this->addPackagePublisher('theme', __DIR__ . '/../resources/theme');
     }
 
     public function register()
