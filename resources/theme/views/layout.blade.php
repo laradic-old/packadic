@@ -17,20 +17,16 @@
             <meta name="csrf-token" content="{{ csrf_token() }}"/>
         @show
         <script>
-            (function(){
-                window.startXdebug = function(){
-                    document.cookie = 'XDEBUG_SESSION=' + 'PHPSTORM' + ';path=/;';
-                    document.cookie = 'XDEBUG_SESSION=' + '' + ';expires=Mon, 05 Jul 2000 00:00:00 GMT;path=/;';
-                    document.location.reload();
-                };
-
-            }.call())
         </script>
         @section('links')
-            <link href="{{ Asset::url("theme::styles/base-stylesheet.css") }}" type="text/css" rel="stylesheet"/>
+            {!! Asset::style("theme::styles/base-stylesheet.css") !!}
+            {!! Asset::style("theme::styles/plugins.css") !!}
+            {!! Asset::style("theme::styles/layout.css") !!}
+            {!! Asset::style("theme::styles/components.css") !!}
             @section('styles')
-                <link href="{{ Asset::url("theme::styles/themes/theme-default.css") }}" type="text/css" rel="stylesheet"/>
+                {!! Asset::style("theme::styles/themes/theme-default.css") !!}
             @show
+            {!! Asset::style("theme::styles/fast.css") !!}
         @show
     @show
 </head>
