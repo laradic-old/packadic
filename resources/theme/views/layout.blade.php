@@ -150,7 +150,7 @@
                 }
             });
 
-            packadic.onBooted('booted', ['theme', 'theme/sidebar', 'autoload'], function(theme, sidebar, autoload){
+            packadic.onBooted(['theme', 'theme/sidebar', 'autoload'], function(theme, sidebar, autoload){
                 theme.init();
                 @if(isset($menu))
                     var sidebarConfig = {
