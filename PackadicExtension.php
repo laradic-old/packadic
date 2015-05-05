@@ -8,6 +8,7 @@
 namespace Laradic\Packadic;
 
 use Laradic\Extensions\Extension;
+use Laradic\Support\Path;
 
 /**
  * This is the Extension.
@@ -27,6 +28,16 @@ class PackadicExtension extends Extension
     protected $dependencies = [
         // 'laradic/admin' => '1.x || >=2.5.0 || 5.0.0 - 7.2.3'
     ];
+    protected $providers = [
+        'Laradic\Themes\ThemeServiceProvider',
+        'Cartalyst\Alerts\Laravel\AlertsServiceProvider',
+    ];
+
+    protected $aliases = [
+        'Alert' => 'Cartalyst\Alerts\Laravel\Facades\Alert'
+    ];
+
+    protected $themes = false;
 
     /**
      * Returns an array with slug, namespace, version and dependencies
@@ -50,6 +61,9 @@ class PackadicExtension extends Extension
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::register();
+
+
+        $app->make('config')->set('cartalyst.alerts.classes', [ 'error' => 'danger' ]);
     }
 
     /**
@@ -59,12 +73,14 @@ class PackadicExtension extends Extension
     {
         /** @var \Illuminate\Foundation\Application $app */
         $app = parent::boot();
+        $themes = $app->make('themes');
+        $themes->addNamespacePublisher('theme', Path::join($this->getPath(), 'resources/theme') );
+        $themes->addNamespace('theme', 'theme');
     }
 
-    /**
-     * Registration is the same as the service provider's register function.
-     */
-    public function registration()
+    public function onInstalled()
     {
+        // publish theme namespace
+        $this->app->make('themes')->publish('theme');
     }
 }

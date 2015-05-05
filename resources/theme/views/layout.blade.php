@@ -118,7 +118,7 @@
 @show
 
 @section('scripts.init')
-    {!! Asset::script("theme::scripts/init.js") !!}
+    {!! Asset::script('theme::scripts/init.js') !!}
     <script>
         (function(){
 
@@ -127,48 +127,44 @@
             packadic.mergeConfig({
                 debug    : false,
                 paths    : {
-                    assets : "{{ Asset::url("theme::") }}",
-                    scripts: "{{ Asset::url("theme::scripts") }}",
-                    styles : "{{ Asset::url("theme::styles") }}"
+                    assets : "{{ Asset::url('theme::') }}",
+                    scripts: "{{ Asset::url('theme::scripts') }}",
+                    styles : "{{ Asset::url('theme::styles') }}"
                 },
                 requireJS: {
-                    baseUrl: "{{ Asset::url("theme::scripts") }}",
+                    baseUrl: "{{ Asset::url('theme::scripts') }}",
                     paths  : {
                         'debugbar': '/laradic/debug/debugbar/javascript'
                     },
                     cm: {
-                        css: '{{ Asset::url("theme::scripts") }}/plugins/codemirror/lib/codemirror.css',
+                        css: '{{ Asset::url('theme::scripts') }}/plugins/codemirror/lib/codemirror.css',
 
                         themes : {
-                            monokai : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/monokai.css',
-                            ambiance: '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/ambiance.css',
-                            eclipse : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/eclipse.css',
-                            twilight : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/twilight.css',
-                            zenburn : '{{ Asset::url("theme::scripts") }}/plugins/codemirror/theme/zenburn.css'
+                            monokai : '{{ Asset::url('theme::scripts') }}/plugins/codemirror/theme/monokai.css',
+                            ambiance: '{{ Asset::url('theme::scripts') }}/plugins/codemirror/theme/ambiance.css',
+                            eclipse : '{{ Asset::url('theme::scripts') }}/plugins/codemirror/theme/eclipse.css',
+                            twilight : '{{ Asset::url('theme::scripts') }}/plugins/codemirror/theme/twilight.css',
+                            zenburn : '{{ Asset::url('theme::scripts') }}/plugins/codemirror/theme/zenburn.css'
                         }
                     }
                 }
             });
 
-            packadic.bindEventHandler('booted', function(){
-                require(['theme', 'theme/sidebar'], function(theme, sidebar){
-                    theme.init();
-                    @if(isset($menu))
-                        var sidebarConfig = {
-                            hidden: false,
-                            items: {!! json_encode($menu) !!}
-                        };
-                        sidebar.init(sidebarConfig);
-                    @else
-                        sidebar.init();
-                    @endif
-                });
-                require(['autoload'], function(autoload){
-                    autoload.scan($('body'), function(){
-                        if(packadic.config.pageLoadedOnAutoloaded === true){
-                            packadic.removePageLoader();
-                        }
-                    });
+            packadic.onBooted('booted', ['theme', 'theme/sidebar', 'autoload'], function(theme, sidebar, autoload){
+                theme.init();
+                @if(isset($menu))
+                    var sidebarConfig = {
+                        hidden: false,
+                        items: {!! json_encode($menu) !!}
+                    };
+                    sidebar.init(sidebarConfig);
+                @else
+                    sidebar.init();
+                @endif
+                autoload.scan($('body'), function(){
+                    if(packadic.config.pageLoadedOnAutoloaded === true){
+                        packadic.removePageLoader();
+                    }
                 });
             });
 
@@ -176,7 +172,9 @@
     </script>
 
     {{-- It conflicts with requirejs jquery, so this fixes it --}}
-    @include('theme::partials.debugbar')
+    @if(config('app.debug') and app()->bound('debugbar') and class_exists('Laradic\Debug\Providers\DebugbarServiceProvider'))
+        @include('theme::partials.debugbar')
+    @endif
 @show
 
 @section('scripts.custom')
@@ -184,7 +182,7 @@
 @show
 
 @section('scripts.boot')
-    {!! Asset::script("theme::scripts/boot.js") !!}
+    {!! Asset::script('theme::scripts/boot.js') !!}
 @show
 
 </body>
