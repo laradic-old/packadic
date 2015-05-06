@@ -1,7 +1,1 @@
-var isBlank = require('./isBlank');
-var trim = require('./trim');
-
-module.exports = function words(str, delimiter) {
-  if (isBlank(str)) return [];
-  return trim(str, delimiter).split(delimiter || /\s+/);
-};
+var isBlank=require("./isBlank"),trim=require("./trim");module.exports=function(t,n){return isBlank(t)?[]:trim(t,n).split(n||/\s+/)};

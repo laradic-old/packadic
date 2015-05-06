@@ -1,7 +1,1 @@
-/*
-CryptoJS v3.1.2
-code.google.com/p/crypto-js
-(c) 2009-2013 by Jeff Mott. All rights reserved.
-code.google.com/p/crypto-js/wiki/License
-*/
-CryptoJS.mode.CFB=function(){function g(c,b,e,a){var d=this._iv;d?(d=d.slice(0),this._iv=void 0):d=this._prevBlock;a.encryptBlock(d,0);for(a=0;a<e;a++)c[b+a]^=d[a]}var f=CryptoJS.lib.BlockCipherMode.extend();f.Encryptor=f.extend({processBlock:function(c,b){var e=this._cipher,a=e.blockSize;g.call(this,c,b,a,e);this._prevBlock=c.slice(b,b+a)}});f.Decryptor=f.extend({processBlock:function(c,b){var e=this._cipher,a=e.blockSize,d=c.slice(b,b+a);g.call(this,c,b,a,e);this._prevBlock=d}});return f}();
+CryptoJS.mode.CFB=function(){function e(e,t,n,r){var i=this._iv;i?(i=i.slice(0),this._iv=void 0):i=this._prevBlock,r.encryptBlock(i,0);for(r=0;r<n;r++)e[t+r]^=i[r]}var t=CryptoJS.lib.BlockCipherMode.extend();return t.Encryptor=t.extend({processBlock:function(t,n){var r=this._cipher,i=r.blockSize;e.call(this,t,n,i,r),this._prevBlock=t.slice(n,n+i)}}),t.Decryptor=t.extend({processBlock:function(t,n){var r=this._cipher,i=r.blockSize,s=t.slice(n,n+i);e.call(this,t,n,i,r),this._prevBlock=s}}),t}();

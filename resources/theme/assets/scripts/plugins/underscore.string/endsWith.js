@@ -1,13 +1,1 @@
-var makeString = require('./helper/makeString');
-var toPositive = require('./helper/toPositive');
-
-module.exports = function endsWith(str, ends, position) {
-  str = makeString(str);
-  ends = '' + ends;
-  if (typeof position == 'undefined') {
-    position = str.length - ends.length;
-  } else {
-    position = Math.min(toPositive(position), str.length) - ends.length;
-  }
-  return position >= 0 && str.indexOf(ends, position) === position;
-};
+var makeString=require("./helper/makeString"),toPositive=require("./helper/toPositive");module.exports=function(t,n,r){return t=makeString(t),n=""+n,typeof r=="undefined"?r=t.length-n.length:r=Math.min(toPositive(r),t.length)-n.length,r>=0&&t.indexOf(n,r)===r};

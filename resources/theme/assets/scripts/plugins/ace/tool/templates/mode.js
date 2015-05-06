@@ -33,7 +33,7 @@
 */
 
 define(function(require, exports, module) {
-"use strict";
+
 
 var oop = require("../lib/oop");
 var TextMode = require("./text").Mode;

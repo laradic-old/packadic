@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./properties.snippets");
-exports.scope = "properties";
-
-});
+define(["require","exports","module","../requirejs/text!./properties.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./properties.snippets"),t.scope="properties"});

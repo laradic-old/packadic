@@ -1,4 +1,4 @@
-'use strict';
+
 
 if (!(typeof Function.prototype.bind === 'function' && typeof Array.isArray === 'function') ||
     /no-interactivity/.test(location.search)) {

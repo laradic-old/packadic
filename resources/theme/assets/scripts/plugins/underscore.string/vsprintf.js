@@ -1,6 +1,1 @@
-var sprintf = require('./sprintf');
-
-module.exports = function vsprintf(fmt, argv) {
-  argv.unshift(fmt);
-  return sprintf.apply(null, argv);
-};
+var sprintf=require("./sprintf");module.exports=function(t,n){return n.unshift(t),sprintf.apply(null,n)};

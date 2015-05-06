@@ -1,18 +1,1 @@
-var makeString = require('./helper/makeString');
-var escapeChars = require('./helper/escapeChars');
-
-module.exports = function unescapeHTML(str) {
-  return makeString(str).replace(/\&([^;]+);/g, function(entity, entityCode) {
-    var match;
-
-    if (entityCode in escapeChars) {
-      return escapeChars[entityCode];
-    } else if (match = entityCode.match(/^#x([\da-fA-F]+)$/)) {
-      return String.fromCharCode(parseInt(match[1], 16));
-    } else if (match = entityCode.match(/^#(\d+)$/)) {
-      return String.fromCharCode(~~match[1]);
-    } else {
-      return entity;
-    }
-  });
-};
+var makeString=require("./helper/makeString"),escapeChars=require("./helper/escapeChars");module.exports=function(t){return makeString(t).replace(/\&([^;]+);/g,function(e,t){var n;return t in escapeChars?escapeChars[t]:(n=t.match(/^#x([\da-fA-F]+)$/))?String.fromCharCode(parseInt(n[1],16)):(n=t.match(/^#(\d+)$/))?String.fromCharCode(~~n[1]):e})};

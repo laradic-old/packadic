@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./verilog.snippets");
-exports.scope = "verilog";
-
-});
+define(["require","exports","module","../requirejs/text!./verilog.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./verilog.snippets"),t.scope="verilog"});

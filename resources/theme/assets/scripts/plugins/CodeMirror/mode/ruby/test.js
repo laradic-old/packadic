@@ -1,11 +1,1 @@
-(function() {
-  var mode = CodeMirror.getMode({indentUnit: 2}, "ruby");
-  function MT(name) { test.mode(name, mode, Array.prototype.slice.call(arguments, 1)); }
-
-  MT("divide_equal_operator",
-     "[variable bar] [operator /=] [variable foo]");
-
-  MT("divide_equal_operator_no_spacing",
-     "[variable foo][operator /=][number 42]");
-
-})();
+(function(){function t(t){test.mode(t,e,Array.prototype.slice.call(arguments,1))}var e=CodeMirror.getMode({indentUnit:2},"ruby");t("divide_equal_operator","[variable bar] [operator /=] [variable foo]"),t("divide_equal_operator_no_spacing","[variable foo][operator /=][number 42]")})();

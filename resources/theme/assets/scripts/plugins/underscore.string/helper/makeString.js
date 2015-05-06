@@ -1,7 +1,1 @@
-/**
- * Ensure some object is a coerced to a string
- **/
-module.exports = function makeString(object) {
-  if (object == null) return '';
-  return '' + object;
-};
+module.exports=function(t){return t==null?"":""+t};

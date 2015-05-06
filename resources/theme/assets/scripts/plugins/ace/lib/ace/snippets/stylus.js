@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./stylus.snippets");
-exports.scope = "stylus";
-
-});
+define(["require","exports","module","../requirejs/text!./stylus.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./stylus.snippets"),t.scope="stylus"});

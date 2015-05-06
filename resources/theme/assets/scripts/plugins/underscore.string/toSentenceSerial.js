@@ -1,5 +1,1 @@
-var toSentence = require('./toSentence');
-
-module.exports = function toSentenceSerial(array, sep, lastSep) {
-  return toSentence(array, sep, lastSep, true);
-};
+var toSentence=require("./toSentence");module.exports=function(t,n,r){return toSentence(t,n,r,!0)};

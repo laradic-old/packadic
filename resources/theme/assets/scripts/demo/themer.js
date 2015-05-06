@@ -1,13 +1,1 @@
-define([ 'jquery' ],
-    function( $, _ ){
-        'use strict';
-
-        var themer = {};
-
-
-
-        return function($els){
-            console.log('button-icon-showcase', $els);
-
-        };
-    });
+define(["jquery"],function(e,t){var n={};return function(e){console.log("button-icon-showcase",e)}});

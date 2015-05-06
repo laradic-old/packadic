@@ -1,9 +1,1 @@
-define([ 'jquery', 'lodash' ],
-    function( $, _ ){
-        'use strict';
-
-        return function($els){
-            console.log('button-icon-showcase', $els);
-
-        };
-    });
+define(["jquery","lodash"],function(e,t){return function(e){console.log("button-icon-showcase",e)}});

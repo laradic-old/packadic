@@ -1,5 +1,5 @@
 !function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.jade=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-'use strict';
+
 
 var nodes = require('./nodes');
 var filters = require('./filters');
@@ -722,7 +722,7 @@ Compiler.prototype = {
 };
 
 },{"./doctypes":2,"./filters":3,"./nodes":16,"./runtime":24,"./utils":25,"character-parser":29,"constantinople":30,"void-elements":34}],2:[function(require,module,exports){
-'use strict';
+
 
 module.exports = {
     'default': '<!DOCTYPE html>'
@@ -735,7 +735,7 @@ module.exports = {
   , 'mobile': '<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">'
 };
 },{}],3:[function(require,module,exports){
-'use strict';
+
 
 module.exports = filter;
 function filter(name, str, options) {
@@ -747,7 +747,7 @@ function filter(name, str, options) {
 }
 
 },{}],4:[function(require,module,exports){
-'use strict';
+
 
 /*!
  * Jade
@@ -1162,7 +1162,7 @@ exports.compileFileClient = function(path, options){
 exports.__express = exports.renderFile;
 
 },{"./compiler":1,"./doctypes":2,"./filters":3,"./lexer":6,"./nodes":16,"./parser":23,"./runtime":24,"./utils":25,"fs":26,"void-elements":34,"with":35}],5:[function(require,module,exports){
-'use strict';
+
 
 module.exports = [
     'a'
@@ -1186,7 +1186,7 @@ module.exports = [
   , 'sup'
 ];
 },{}],6:[function(require,module,exports){
-'use strict';
+
 
 var utils = require('./utils');
 var characterParser = require('character-parser');
@@ -2120,7 +2120,7 @@ Lexer.prototype = {
 };
 
 },{"./utils":25,"character-parser":29}],7:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2205,7 +2205,7 @@ Attrs.prototype.addAttributes = function (src) {
 };
 
 },{"./node":20}],8:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2231,7 +2231,7 @@ BlockComment.prototype.constructor = BlockComment;
 BlockComment.prototype.type = 'BlockComment';
 
 },{"./node":20}],9:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2351,7 +2351,7 @@ Block.prototype.clone = function(){
 };
 
 },{"./node":20}],10:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2386,7 +2386,7 @@ When.prototype.constructor = When;
 When.prototype.type = 'When';
 
 },{"./node":20}],11:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2413,7 +2413,7 @@ Code.prototype.constructor = Code;
 
 Code.prototype.type = 'Code'; // prevent the minifiers removing this
 },{"./node":20}],12:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2438,7 +2438,7 @@ Comment.prototype.constructor = Comment;
 Comment.prototype.type = 'Comment';
 
 },{"./node":20}],13:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2460,7 +2460,7 @@ Doctype.prototype.constructor = Doctype;
 Doctype.prototype.type = 'Doctype';
 
 },{"./node":20}],14:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2488,7 +2488,7 @@ Each.prototype.constructor = Each;
 Each.prototype.type = 'Each';
 
 },{"./node":20}],15:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2514,7 +2514,7 @@ Filter.prototype.constructor = Filter;
 Filter.prototype.type = 'Filter';
 
 },{"./node":20}],16:[function(require,module,exports){
-'use strict';
+
 
 exports.Node = require('./node');
 exports.Tag = require('./tag');
@@ -2532,7 +2532,7 @@ exports.BlockComment = require('./block-comment');
 exports.Doctype = require('./doctype');
 
 },{"./block":9,"./block-comment":8,"./case":10,"./code":11,"./comment":12,"./doctype":13,"./each":14,"./filter":15,"./literal":17,"./mixin":19,"./mixin-block":18,"./node":20,"./tag":21,"./text":22}],17:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2554,7 +2554,7 @@ Literal.prototype.constructor = Literal;
 Literal.prototype.type = 'Literal';
 
 },{"./node":20}],18:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2574,7 +2574,7 @@ MixinBlock.prototype.constructor = MixinBlock;
 MixinBlock.prototype.type = 'MixinBlock';
 
 },{"./node":20}],19:[function(require,module,exports){
-'use strict';
+
 
 var Attrs = require('./attrs');
 
@@ -2602,7 +2602,7 @@ Mixin.prototype.constructor = Mixin;
 Mixin.prototype.type = 'Mixin';
 
 },{"./attrs":7}],20:[function(require,module,exports){
-'use strict';
+
 
 var Node = module.exports = function Node(){};
 
@@ -2622,7 +2622,7 @@ Node.prototype.clone = function(){
 Node.prototype.type = '';
 
 },{}],21:[function(require,module,exports){
-'use strict';
+
 
 var Attrs = require('./attrs');
 var Block = require('./block');
@@ -2713,7 +2713,7 @@ Tag.prototype.canInline = function(){
 };
 
 },{"../inline-tags":5,"./attrs":7,"./block":9}],22:[function(require,module,exports){
-'use strict';
+
 
 var Node = require('./node');
 
@@ -2740,7 +2740,7 @@ Text.prototype.type = 'Text';
 
 Text.prototype.isText = true;
 },{"./node":20}],23:[function(require,module,exports){
-'use strict';
+
 
 var Lexer = require('./lexer');
 var nodes = require('./nodes');
@@ -3567,7 +3567,7 @@ Parser.prototype = {
 };
 
 },{"./filters":3,"./lexer":6,"./nodes":16,"./utils":25,"character-parser":29,"constantinople":30,"fs":26,"path":27}],24:[function(require,module,exports){
-'use strict';
+
 
 /**
  * Merge two attribute objects giving precedence
@@ -3801,7 +3801,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 };
 
 },{"fs":26}],25:[function(require,module,exports){
-'use strict';
+
 
 /**
  * Merge `b` into `a`.
@@ -4451,7 +4451,7 @@ function isExpression(src) {
 }
 
 },{"acorn-globals":31}],31:[function(require,module,exports){
-'use strict';
+
 
 var acorn = require('acorn');
 var walk = require('acorn/util/walk');
@@ -4581,7 +4581,7 @@ function findGlobals(source) {
   if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD
   mod(root.acorn || (root.acorn = {})); // Plain browser env
 })(this, function(exports) {
-  "use strict";
+  
 
   exports.version = "0.8.0";
 
@@ -5722,7 +5722,7 @@ function findGlobals(source) {
   }
 
   // Enter strict mode. Re-reads the next token to please pedantic
-  // tests ("use strict"; 010; -- should fail).
+  // tests ( 010; -- should fail).
 
   function setStrict(strct) {
     strict = strct;
@@ -5797,7 +5797,7 @@ function findGlobals(source) {
 
   function isUseStrict(stmt) {
     return options.ecmaVersion >= 5 && stmt.type === "ExpressionStatement" &&
-      stmt.expression.type === "Literal" && stmt.expression.value === "use strict";
+      stmt.expression.type === "Literal" && stmt.expression.value === 
   }
 
   // Predicate that tests whether the next token is of the given
@@ -7121,7 +7121,7 @@ function findGlobals(source) {
   if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD
   mod((this.acorn || (this.acorn = {})).walk = {}); // Plain browser env
 })(function(exports) {
-  "use strict";
+  
 
   // A simple walk is one where you simply specify callbacks to be
   // called on specific nodes. The last two arguments are optional. A
@@ -7490,7 +7490,7 @@ module.exports = {
 };
 
 },{}],35:[function(require,module,exports){
-'use strict';
+
 
 var detect = require('acorn-globals');
 var acorn = require('acorn');

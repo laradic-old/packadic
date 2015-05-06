@@ -1,6 +1,1 @@
-module.exports = function unquote(str, quoteChar) {
-  quoteChar = quoteChar || '"';
-  if (str[0] === quoteChar && str[str.length - 1] === quoteChar)
-    return str.slice(1, str.length - 1);
-  else return str;
-};
+module.exports=function(t,n){return n=n||'"',t[0]===n&&t[t.length-1]===n?t.slice(1,t.length-1):t};

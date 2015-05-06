@@ -1,7 +1,1 @@
-var chars = require('./chars');
-
-module.exports = function splice(str, i, howmany, substr) {
-  var arr = chars(str);
-  arr.splice(~~i, ~~howmany, substr);
-  return arr.join('');
-};
+var chars=require("./chars");module.exports=function(t,n,r,i){var s=chars(t);return s.splice(~~n,~~r,i),s.join("")};

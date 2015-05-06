@@ -1,7 +1,1 @@
-var makeString = require('./helper/makeString');
-
-module.exports = function swapCase(str) {
-  return makeString(str).replace(/\S/g, function(c) {
-    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
-  });
-};
+var makeString=require("./helper/makeString");module.exports=function(t){return makeString(t).replace(/\S/g,function(e){return e===e.toUpperCase()?e.toLowerCase():e.toUpperCase()})};

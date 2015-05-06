@@ -1,7 +1,1 @@
-/*
-CryptoJS v3.1.2
-code.google.com/p/crypto-js
-(c) 2009-2013 by Jeff Mott. All rights reserved.
-code.google.com/p/crypto-js/wiki/License
-*/
-CryptoJS.mode.CTR=function(){var b=CryptoJS.lib.BlockCipherMode.extend(),g=b.Encryptor=b.extend({processBlock:function(b,f){var a=this._cipher,e=a.blockSize,c=this._iv,d=this._counter;c&&(d=this._counter=c.slice(0),this._iv=void 0);c=d.slice(0);a.encryptBlock(c,0);d[e-1]=d[e-1]+1|0;for(a=0;a<e;a++)b[f+a]^=c[a]}});b.Decryptor=g;return b}();
+CryptoJS.mode.CTR=function(){var e=CryptoJS.lib.BlockCipherMode.extend(),t=e.Encryptor=e.extend({processBlock:function(e,t){var n=this._cipher,r=n.blockSize,i=this._iv,s=this._counter;i&&(s=this._counter=i.slice(0),this._iv=void 0),i=s.slice(0),n.encryptBlock(i,0),s[r-1]=s[r-1]+1|0;for(n=0;n<r;n++)e[t+n]^=i[n]}});return e.Decryptor=t,e}();

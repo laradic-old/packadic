@@ -1,6 +1,1 @@
-var makeString = require('./helper/makeString');
-
-module.exports = function include(str, needle) {
-  if (needle === '') return true;
-  return makeString(str).indexOf(needle) !== -1;
-};
+var makeString=require("./helper/makeString");module.exports=function(t,n){return n===""?!0:makeString(t).indexOf(n)!==-1};

@@ -1,4 +1,1 @@
-define(['jquery', 'packadic/packadic'],
-function($, Packadic){
-
-});
+define(["jquery","packadic/packadic"],function(e,t){});

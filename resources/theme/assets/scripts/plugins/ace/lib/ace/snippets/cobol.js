@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./cobol.snippets");
-exports.scope = "cobol";
-
-});
+define(["require","exports","module","../requirejs/text!./cobol.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./cobol.snippets"),t.scope="cobol"});

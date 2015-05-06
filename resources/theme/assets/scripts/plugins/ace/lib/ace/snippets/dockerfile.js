@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./dockerfile.snippets");
-exports.scope = "dockerfile";
-
-});
+define(["require","exports","module","../requirejs/text!./dockerfile.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./dockerfile.snippets"),t.scope="dockerfile"});

@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./erlang.snippets");
-exports.scope = "erlang";
-
-});
+define(["require","exports","module","../requirejs/text!./erlang.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./erlang.snippets"),t.scope="erlang"});

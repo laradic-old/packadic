@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./scala.snippets");
-exports.scope = "scala";
-
-});
+define(["require","exports","module","../requirejs/text!./scala.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./scala.snippets"),t.scope="scala"});

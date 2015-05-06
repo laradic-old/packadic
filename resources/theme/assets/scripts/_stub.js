@@ -1,7 +1,1 @@
-require([
-    'jquery', 'defined', 'default', 'cre'
-], function($, defined, def, cre){
-    "use strict";
-
-
-});
+require(["jquery","defined","default","cre"],function(e,t,n,r){});

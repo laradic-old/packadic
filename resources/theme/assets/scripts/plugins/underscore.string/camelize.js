@@ -1,14 +1,1 @@
-var trim = require('./trim');
-var decap = require('./decapitalize');
-
-module.exports = function camelize(str, decapitalize) {
-  str = trim(str).replace(/[-_\s]+(.)?/g, function(match, c) {
-    return c ? c.toUpperCase() : "";
-  });
-
-  if (decapitalize === true) {
-    return decap(str);
-  } else {
-    return str;
-  }
-};
+var trim=require("./trim"),decap=require("./decapitalize");module.exports=function(t,n){return t=trim(t).replace(/[-_\s]+(.)?/g,function(e,t){return t?t.toUpperCase():""}),n===!0?decap(t):t};

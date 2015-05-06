@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./gitignore.snippets");
-exports.scope = "gitignore";
-
-});
+define(["require","exports","module","../requirejs/text!./gitignore.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./gitignore.snippets"),t.scope="gitignore"});

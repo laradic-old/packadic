@@ -1,4 +1,1 @@
-module.exports = function lines(str) {
-  if (str == null) return [];
-  return String(str).split(/\r?\n/);
-};
+module.exports=function(t){return t==null?[]:String(t).split(/\r?\n/)};

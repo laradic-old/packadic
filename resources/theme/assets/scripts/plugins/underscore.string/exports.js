@@ -1,10 +1,1 @@
-module.exports = function() {
-  var result = {};
-
-  for (var prop in this) {
-    if (!this.hasOwnProperty(prop) || prop.match(/^(?:include|contains|reverse|join)$/)) continue;
-    result[prop] = this[prop];
-  }
-
-  return result;
-};
+module.exports=function(){var e={};for(var t in this){if(!this.hasOwnProperty(t)||t.match(/^(?:include|contains|reverse|join)$/))continue;e[t]=this[t]}return e};

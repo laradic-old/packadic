@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./matlab.snippets");
-exports.scope = "matlab";
-
-});
+define(["require","exports","module","../requirejs/text!./matlab.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./matlab.snippets"),t.scope="matlab"});

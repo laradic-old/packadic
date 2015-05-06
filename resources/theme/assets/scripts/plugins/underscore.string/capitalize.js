@@ -1,6 +1,1 @@
-var makeString = require('./helper/makeString');
-
-module.exports = function capitalize(str) {
-  str = makeString(str);
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
+var makeString=require("./helper/makeString");module.exports=function(t){return t=makeString(t),t.charAt(0).toUpperCase()+t.slice(1)};

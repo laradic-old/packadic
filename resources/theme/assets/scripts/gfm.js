@@ -1,14 +1,1 @@
-define([ 'plugins/highlightjs', 'plugins/marked' ],
-    function( highlightjs, marked ){
-        'use strict';
-
-        marked.setOptions({
-
-            breaks: true,
-            highlight: function(code, lang) {
-                console.log('highlighting ', lang, code);
-                return highlightjs.highlightAuto(code).value;
-            }
-        });
-        return marked;
-    });
+define(["plugins/highlightjs","plugins/marked"],function(e,t){return t.setOptions({breaks:!0,highlight:function(t,n){return console.log("highlighting ",n,t),e.highlightAuto(t).value}}),t});

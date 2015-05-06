@@ -1,10 +1,1 @@
-'use strict';
-
-module.exports = filter;
-function filter(name, str, options) {
-  if (typeof filter[name] === 'function') {
-    return filter[name](str, options);
-  } else {
-    throw new Error('unknown filter ":' + name + '"');
-  }
-}
+function filter(e,t,n){if(typeof filter[e]=="function")return filter[e](t,n);throw new Error('unknown filter ":'+e+'"')}module.exports=filter;

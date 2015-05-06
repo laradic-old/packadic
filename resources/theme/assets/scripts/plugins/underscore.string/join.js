@@ -1,9 +1,1 @@
-var makeString = require('./helper/makeString');
-var slice = [].slice;
-
-module.exports = function join() {
-  var args = slice.call(arguments),
-    separator = args.shift();
-
-  return args.join(makeString(separator));
-};
+var makeString=require("./helper/makeString"),slice=[].slice;module.exports=function(){var t=slice.call(arguments),n=t.shift();return t.join(makeString(n))};

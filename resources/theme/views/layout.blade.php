@@ -19,14 +19,10 @@
         <script>
         </script>
         @section('links')
-            {!! Asset::style("theme::styles/base-stylesheet.css") !!}
-            {!! Asset::style("theme::styles/plugins.css") !!}
-            {!! Asset::style("theme::styles/layout.css") !!}
-            {!! Asset::style("theme::styles/components.css") !!}
+            {!! Asset::style("theme::styles/stylesheet.css") !!}
             @section('styles')
                 {!! Asset::style("theme::styles/themes/theme-default.css") !!}
             @show
-            {!! Asset::style("theme::styles/fast.css") !!}
         @show
     @show
 </head>

@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./html_ruby.snippets");
-exports.scope = "html_ruby";
-
-});
+define(["require","exports","module","../requirejs/text!./html_ruby.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./html_ruby.snippets"),t.scope="html_ruby"});

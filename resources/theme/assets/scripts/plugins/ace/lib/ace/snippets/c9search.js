@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./c9search.snippets");
-exports.scope = "c9search";
-
-});
+define(["require","exports","module","../requirejs/text!./c9search.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./c9search.snippets"),t.scope="c9search"});

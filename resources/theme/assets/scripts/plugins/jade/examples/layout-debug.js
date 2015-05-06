@@ -1,11 +1,1 @@
-
-/**
- * Module dependencies.
- */
-
-var jade = require('../');
-
-jade.renderFile(__dirname + '/layout.jade', { debug: true }, function(err, html){
-    if (err) throw err;
-    console.log(html);
-});
+var jade=require("../");jade.renderFile(__dirname+"/layout.jade",{debug:!0},function(e,t){if(e)throw e;console.log(t)});

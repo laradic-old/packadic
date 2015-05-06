@@ -1,3 +1,1 @@
-module.exports = function surround(str, wrapper) {
-  return [wrapper, str, wrapper].join('');
-};
+module.exports=function(t,n){return[n,t,n].join("")};

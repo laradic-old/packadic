@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./pgsql.snippets");
-exports.scope = "pgsql";
-
-});
+define(["require","exports","module","../requirejs/text!./pgsql.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./pgsql.snippets"),t.scope="pgsql"});

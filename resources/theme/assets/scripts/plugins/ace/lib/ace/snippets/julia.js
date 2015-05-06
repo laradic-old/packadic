@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./julia.snippets");
-exports.scope = "julia";
-
-});
+define(["require","exports","module","../requirejs/text!./julia.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./julia.snippets"),t.scope="julia"});

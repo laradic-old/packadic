@@ -1,5 +1,1 @@
-var surround = require('./surround');
-
-module.exports = function quote(str, quoteChar) {
-  return surround(str, quoteChar || '"');
-};
+var surround=require("./surround");module.exports=function(t,n){return surround(t,n||'"')};

@@ -1,5 +1,1 @@
-var adjacent = require('./helper/adjacent');
-
-module.exports = function succ(str) {
-  return adjacent(str, -1);
-};
+var adjacent=require("./helper/adjacent");module.exports=function(t){return adjacent(t,-1)};

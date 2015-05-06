@@ -1,15 +1,1 @@
-define([ 'jquery', 'plugins/bootstrap' ],
-    function( $ ){
-        'use strict';
-
-        return function($els){
-            $els.each(function(){
-                var $this = $(this);
-                $this.popover({
-                    content: $this.data('content'),
-                    title: $this.attr('title')
-                })
-            });
-
-        };
-    });
+define(["jquery","plugins/bootstrap"],function(e){return function(t){t.each(function(){var t=e(this);t.popover({content:t.data("content"),title:t.attr("title")})})}});

@@ -1,5 +1,1 @@
-var trim = require('./trim');
-
-module.exports = function clean(str) {
-  return trim(str).replace(/\s+/g, ' ');
-};
+var trim=require("./trim");module.exports=function(t){return trim(t).replace(/\s+/g," ")};

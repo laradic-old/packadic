@@ -1,6 +1,1 @@
-module.exports = function chop(str, step) {
-  if (str == null) return [];
-  str = String(str);
-  step = ~~step;
-  return step > 0 ? str.match(new RegExp('.{1,' + step + '}', 'g')) : [str];
-};
+module.exports=function(t,n){return t==null?[]:(t=String(t),n=~~n,n>0?t.match(new RegExp(".{1,"+n+"}","g")):[t])};

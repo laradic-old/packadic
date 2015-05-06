@@ -1,5 +1,1 @@
-var makeString = require('./makeString');
-
-module.exports = function escapeRegExp(str) {
-  return makeString(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
-};
+var makeString=require("./makeString");module.exports=function(t){return makeString(t).replace(/([.*+?^=!:${}()|[\]\/\\])/g,"\\$1")};

@@ -1,9 +1,1 @@
-module.exports = function strRepeat(str, qty){
-  if (qty < 1) return '';
-  var result = '';
-  while (qty > 0) {
-    if (qty & 1) result += str;
-    qty >>= 1, str += str;
-  }
-  return result;
-};
+module.exports=function(t,n){if(n<1)return"";var r="";while(n>0)n&1&&(r+=t),n>>=1,t+=t;return r};

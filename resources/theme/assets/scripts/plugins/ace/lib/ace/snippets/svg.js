@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./svg.snippets");
-exports.scope = "svg";
-
-});
+define(["require","exports","module","../requirejs/text!./svg.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./svg.snippets"),t.scope="svg"});

@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./ocaml.snippets");
-exports.scope = "ocaml";
-
-});
+define(["require","exports","module","../requirejs/text!./ocaml.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./ocaml.snippets"),t.scope="ocaml"});

@@ -1,5 +1,1 @@
-var splice = require('./splice');
-
-module.exports = function insert(str, i, substr) {
-  return splice(str, i, 0, substr);
-};
+var splice=require("./splice");module.exports=function(t,n,r){return splice(t,n,0,r)};

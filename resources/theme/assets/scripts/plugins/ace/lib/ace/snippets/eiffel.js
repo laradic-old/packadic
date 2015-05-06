@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./eiffel.snippets");
-exports.scope = "eiffel";
-
-});
+define(["require","exports","module","../requirejs/text!./eiffel.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./eiffel.snippets"),t.scope="eiffel"});

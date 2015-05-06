@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./mushcode.snippets");
-exports.scope = "mushcode";
-
-});
+define(["require","exports","module","../requirejs/text!./mushcode.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./mushcode.snippets"),t.scope="mushcode"});

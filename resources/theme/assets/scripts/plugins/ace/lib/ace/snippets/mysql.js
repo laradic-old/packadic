@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./mysql.snippets");
-exports.scope = "mysql";
-
-});
+define(["require","exports","module","../requirejs/text!./mysql.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./mysql.snippets"),t.scope="mysql"});

@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./groovy.snippets");
-exports.scope = "groovy";
-
-});
+define(["require","exports","module","../requirejs/text!./groovy.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./groovy.snippets"),t.scope="groovy"});

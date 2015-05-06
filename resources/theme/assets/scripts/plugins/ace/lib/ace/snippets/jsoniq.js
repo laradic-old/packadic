@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./jsoniq.snippets");
-exports.scope = "jsoniq";
-
-});
+define(["require","exports","module","../requirejs/text!./jsoniq.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./jsoniq.snippets"),t.scope="jsoniq"});

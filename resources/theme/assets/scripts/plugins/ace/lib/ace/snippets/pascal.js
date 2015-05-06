@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./pascal.snippets");
-exports.scope = "pascal";
-
-});
+define(["require","exports","module","../requirejs/text!./pascal.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./pascal.snippets"),t.scope="pascal"});

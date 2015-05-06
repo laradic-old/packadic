@@ -1,5 +1,1 @@
-var trim = require('./trim');
-
-module.exports = function dasherize(str) {
-  return trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
-};
+var trim=require("./trim");module.exports=function(t){return trim(t).replace(/([A-Z])/g,"-$1").replace(/[-_\s]+/g,"-").toLowerCase()};

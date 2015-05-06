@@ -1,8 +1,1 @@
-var makeString = require('./helper/makeString');
-
-module.exports = function strRightBack(str, sep) {
-  str = makeString(str);
-  sep = makeString(sep);
-  var pos = !sep ? -1 : str.lastIndexOf(sep);
-  return~ pos ? str.slice(pos + sep.length, str.length) : str;
-};
+var makeString=require("./helper/makeString");module.exports=function(t,n){t=makeString(t),n=makeString(n);var r=n?t.lastIndexOf(n):-1;return~r?t.slice(r+n.length,t.length):t};

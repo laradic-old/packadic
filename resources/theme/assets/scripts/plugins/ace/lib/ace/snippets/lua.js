@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./lua.snippets");
-exports.scope = "lua";
-
-});
+define(["require","exports","module","../requirejs/text!./lua.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./lua.snippets"),t.scope="lua"});

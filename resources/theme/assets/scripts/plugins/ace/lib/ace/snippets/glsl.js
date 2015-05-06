@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./glsl.snippets");
-exports.scope = "glsl";
-
-});
+define(["require","exports","module","../requirejs/text!./glsl.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./glsl.snippets"),t.scope="glsl"});

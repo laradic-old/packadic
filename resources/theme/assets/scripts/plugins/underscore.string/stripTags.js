@@ -1,5 +1,1 @@
-var makeString = require('./helper/makeString');
-
-module.exports = function stripTags(str) {
-  return makeString(str).replace(/<\/?[^>]+>/g, '');
-};
+var makeString=require("./helper/makeString");module.exports=function(t){return makeString(t).replace(/<\/?[^>]+>/g,"")};

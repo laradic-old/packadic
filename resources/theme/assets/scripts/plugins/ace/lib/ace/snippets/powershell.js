@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./powershell.snippets");
-exports.scope = "powershell";
-
-});
+define(["require","exports","module","../requirejs/text!./powershell.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./powershell.snippets"),t.scope="powershell"});

@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./coldfusion.snippets");
-exports.scope = "coldfusion";
-
-});
+define(["require","exports","module","../requirejs/text!./coldfusion.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./coldfusion.snippets"),t.scope="coldfusion"});

@@ -1,5 +1,1 @@
-var pad = require('./pad');
-
-module.exports = function lpad(str, length, padStr) {
-  return pad(str, length, padStr);
-};
+var pad=require("./pad");module.exports=function(t,n,r){return pad(t,n,r)};

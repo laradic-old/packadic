@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./django.snippets");
-exports.scope = "django";
-
-});
+define(["require","exports","module","../requirejs/text!./django.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./django.snippets"),t.scope="django"});

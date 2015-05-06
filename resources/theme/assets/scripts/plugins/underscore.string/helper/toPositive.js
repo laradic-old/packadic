@@ -1,3 +1,1 @@
-module.exports = function toPositive(number) {
-  return number < 0 ? 0 : (+number || 0);
-};
+module.exports=function(t){return t<0?0:+t||0};

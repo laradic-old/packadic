@@ -1,7 +1,1 @@
-define(function(require, exports, module) {
-"use strict";
-
-exports.snippetText = require("../requirejs/text!./golang.snippets");
-exports.scope = "golang";
-
-});
+define(["require","exports","module","../requirejs/text!./golang.snippets"],function(e,t,n){t.snippetText=e("../requirejs/text!./golang.snippets"),t.scope="golang"});
